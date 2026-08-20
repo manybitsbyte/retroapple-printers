@@ -1,0 +1,47 @@
+# ── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+
+# ── Build / publish artefacts ───────────────────────────────────────────────
+*.tgz
+dist/
+build/
+
+# ── Generated output ────────────────────────────────────────────────────────
+# Printouts are regenerated on demand by `npm run print`; they are large,
+# binary, and change whenever the renderer or a glyph does — exactly the sort
+# of thing that makes a diff useless. Keep them out.
+test/printout/out/
+
+# ── Test / coverage ─────────────────────────────────────────────────────────
+coverage/
+.vitest/
+.nyc_output/
+
+# ── Logs ────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+
+# ── Editors ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# ── Local environment ───────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local

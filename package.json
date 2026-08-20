@@ -1,0 +1,67 @@
+{
+  "name": "@manybitsbyte/retroapple-printers",
+  "version": "0.1.0",
+  "description": "Headless emulation of classic dot-matrix printers — Apple ImageWriter I/II, Apple DMP and Epson FX-80. Feed it the byte stream, get back a timed stream of dot strikes and paper feeds. No DOM, no dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Shawn Bullock",
+    "url": "https://github.com/manybitsbyte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manybitsbyte/retroapple-printers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manybitsbyte/retroapple-printers/issues"
+  },
+  "homepage": "https://github.com/manybitsbyte/retroapple-printers#readme",
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:update": "vitest run -u",
+    "print": "node test/printout/print.js"
+  },
+  "keywords": [
+    "printer",
+    "dot-matrix",
+    "emulation",
+    "emulator",
+    "imagewriter",
+    "apple-ii",
+    "epson",
+    "fx-80",
+    "esc-p",
+    "escp",
+    "c-itoh",
+    "8510",
+    "retrocomputing",
+    "centronics",
+    "vintage"
+  ],
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,145 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EpsonFX80 — bit-image graphics > ESC K emits one dot column per data byte 1`] = `
+[
+  "newline",
+  "dots 0b010000000 x=0 w=8",
+  "dots 0b010000001 x=8 w=8",
+  "dots 0b011111111 x=16 w=8",
+  "dots 0b000000000 x=24 w=8",
+  "feed line dist=24",
+]
+`;
+
+exports[`EpsonFX80 — bit-image graphics > a zero-length graphics run consumes no data bytes 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "char x=48 w=4 cols=12",
+  "feed line dist=48",
+]
+`;
+
+exports[`EpsonFX80 — character attributes > ESC - 1 turns on underline, ESC - 0 turns it off 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12 [underline]",
+  "char x=48 w=4 cols=12",
+  "feed line dist=48",
+]
+`;
+
+exports[`EpsonFX80 — character attributes > ESC 4 turns on italic, ESC 5 cancels it 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "char x=48 w=4 cols=12",
+  "feed line dist=48",
+]
+`;
+
+exports[`EpsonFX80 — character attributes > ESC E turns on emphasized (bold) 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12 [bold]",
+  "char x=48 w=4 cols=12 [bold]",
+  "feed line dist=48",
+]
+`;
+
+exports[`EpsonFX80 — character attributes > ESC F cancels emphasized 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12 [bold]",
+  "char x=48 w=4 cols=12",
+  "feed line dist=48",
+]
+`;
+
+exports[`EpsonFX80 — line spacing and paper motion > CR without LF does not feed the paper 1`] = `
+[
+  "line",
+  "line",
+]
+`;
+
+exports[`EpsonFX80 — line spacing and paper motion > ESC 0 / ESC 1 / ESC 2 select 1/8in, 7/72in and 1/6in feeds 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+  "text "C"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+]
+`;
+
+exports[`EpsonFX80 — line spacing and paper motion > form feed ejects the page 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+  "formfeed",
+  "feed return dist=0",
+]
+`;
+
+exports[`EpsonFX80 — pitch > SI selects condensed and SO selects one-line enlarged 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "char x=28 w=4 cols=12",
+  "feed line dist=28",
+  "text "C"",
+  "text "D"",
+  "newline",
+  "char x=56 w=4 cols=12",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+]
+`;
+
+exports[`EpsonFX80 — text > advances the head one pica per character 1`] = `
+[
+  0,
+  48,
+  96,
+  144,
+]
+`;
+
+exports[`EpsonFX80 — text > prints a plain line terminated by CR LF 1`] = `
+[
+  "text "H"",
+  "text "E"",
+  "text "L"",
+  "text "L"",
+  "text "O"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "char x=48 w=4 cols=12",
+  "char x=96 w=4 cols=12",
+  "char x=144 w=4 cols=12",
+  "char x=192 w=4 cols=12",
+  "feed line dist=192",
+]
+`;

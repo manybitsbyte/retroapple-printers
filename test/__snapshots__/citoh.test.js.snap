@@ -1,0 +1,325 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC ! turns bold on and ESC " turns it off 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8 [bold]",
+  "char x=48 w=4 cols=8",
+  "feed line dist=48",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC > selects unidirectional printing, which slews the head home 1`] = `
+[
+  "return",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC > selects unidirectional printing, which slews the head home 2`] = `
+[
+  "line",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC A and ESC B select 6 and 8 lines per inch 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "feed line dist=0",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "feed line dist=0",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC M selects the NLQ font, changing the cell row count 1`] = `
+[
+  9,
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC X starts underline and ESC Y stops it 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8 [underline]",
+  "char x=48 w=4 cols=8",
+  "feed line dist=48",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > ESC x / ESC y / ESC z select superscript, subscript and normal 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "text "C"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "char x=48 w=4 cols=8",
+  "char x=96 w=4 cols=8",
+  "feed line dist=96",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > form feed ejects the page 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "feed line dist=0",
+  "formfeed",
+  "feed return dist=0",
+]
+`;
+
+exports[`AppleDMP — shared C.Itoh behaviour > prints a plain line terminated by CR LF 1`] = `
+[
+  "text "H"",
+  "text "E"",
+  "text "L"",
+  "text "L"",
+  "text "O"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "char x=48 w=4 cols=8",
+  "char x=96 w=4 cols=8",
+  "char x=144 w=4 cols=8",
+  "char x=192 w=4 cols=8",
+  "feed line dist=192",
+]
+`;
+
+exports[`ImageWriter II — colour ribbon > ESC K n selects the ribbon colour band when a colour cart is loaded 1`] = `
+[
+  "black",
+  "yellow",
+  "magenta",
+  "cyan",
+  "orange",
+  "green",
+  "purple",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC ! turns bold on and ESC " turns it off 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8 [bold]",
+  "char x=40 w=4 cols=8",
+  "feed line dist=40",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC > selects unidirectional printing, which slews the head home 1`] = `
+[
+  "return",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC > selects unidirectional printing, which slews the head home 2`] = `
+[
+  "line",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC A and ESC B select 6 and 8 lines per inch 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "feed line dist=0",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "feed line dist=0",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC M selects the NLQ font, changing the cell row count 1`] = `
+[
+  9,
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC X starts underline and ESC Y stops it 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8 [underline]",
+  "char x=40 w=4 cols=8",
+  "feed line dist=40",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > ESC x / ESC y / ESC z select superscript, subscript and normal 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "text "C"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "char x=40 w=4 cols=8",
+  "char x=80 w=4 cols=8",
+  "feed line dist=80",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > form feed ejects the page 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "feed line dist=0",
+  "formfeed",
+  "feed return dist=0",
+]
+`;
+
+exports[`ImageWriterI — shared C.Itoh behaviour > prints a plain line terminated by CR LF 1`] = `
+[
+  "text "H"",
+  "text "E"",
+  "text "L"",
+  "text "L"",
+  "text "O"",
+  "newline",
+  "char x=0 w=4 cols=8",
+  "char x=40 w=4 cols=8",
+  "char x=80 w=4 cols=8",
+  "char x=120 w=4 cols=8",
+  "char x=160 w=4 cols=8",
+  "feed line dist=160",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC ! turns bold on and ESC " turns it off 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=8 [bold]",
+  "char x=48 w=4 cols=12",
+  "feed line dist=48",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC > selects unidirectional printing, which slews the head home 1`] = `
+[
+  "return",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC > selects unidirectional printing, which slews the head home 2`] = `
+[
+  "line",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC A and ESC B select 6 and 8 lines per inch 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC M selects the NLQ font, changing the cell row count 1`] = `
+[
+  18,
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC X starts underline and ESC Y stops it 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "newline",
+  "char x=0 w=4 cols=12 [underline]",
+  "char x=48 w=4 cols=12",
+  "feed line dist=48",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > ESC x / ESC y / ESC z select superscript, subscript and normal 1`] = `
+[
+  "text "A"",
+  "text "B"",
+  "text "C"",
+  "newline",
+  "char x=0 w=4 cols=8 [super]",
+  "char x=48 w=4 cols=8 [sub]",
+  "char x=96 w=4 cols=12",
+  "feed line dist=96",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > form feed ejects the page 1`] = `
+[
+  "text "A"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "feed line dist=0",
+  "formfeed",
+  "feed return dist=0",
+]
+`;
+
+exports[`ImageWriterII — shared C.Itoh behaviour > prints a plain line terminated by CR LF 1`] = `
+[
+  "text "H"",
+  "text "E"",
+  "text "L"",
+  "text "L"",
+  "text "O"",
+  "newline",
+  "char x=0 w=4 cols=12",
+  "char x=48 w=4 cols=12",
+  "char x=96 w=4 cols=12",
+  "char x=144 w=4 cols=12",
+  "char x=192 w=4 cols=12",
+  "feed line dist=192",
+]
+`;
+
+exports[`model identity and metrics > AppleDMP reports stable name, id and dpi 1`] = `
+{
+  "colorRibbon": false,
+  "cps": 120,
+  "dpi": 480,
+  "id": "apple-dmp",
+  "name": "Apple DMP",
+}
+`;
+
+exports[`model identity and metrics > ImageWriterI reports stable name, id and dpi 1`] = `
+{
+  "colorRibbon": false,
+  "cps": 120,
+  "dpi": 480,
+  "id": "imagewriter-i",
+  "name": "ImageWriter I",
+}
+`;
+
+exports[`model identity and metrics > ImageWriterII reports stable name, id and dpi 1`] = `
+{
+  "colorRibbon": true,
+  "cps": 250,
+  "dpi": 480,
+  "id": "imagewriter-ii",
+  "name": "ImageWriter II",
+}
+`;

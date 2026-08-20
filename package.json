@@ -1,6 +1,6 @@
 {
   "name": "@manybitsbyte/retroapple-printers",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Headless emulation of classic dot-matrix printers — Apple ImageWriter I/II, Apple DMP and Epson FX-80. Feed it the byte stream, get back a timed stream of dot strikes and paper feeds. No DOM, no dependencies.",
   "type": "module",
   "license": "MIT",

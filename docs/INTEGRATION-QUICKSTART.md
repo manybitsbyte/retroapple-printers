@@ -35,9 +35,9 @@ No DOM, no timers.
 npm install @manybitsbyte/retroapple-printers
 ```
 
-Version `0.1.0` is not on the public registry yet. Until it is, install from a
-checkout — `npm install /path/to/retroapple-printers` — which links the package
-into `node_modules/@manybitsbyte/retroapple-printers`, the layout used here.
+A checkout works too — `npm install /path/to/retroapple-printers` links the
+package into `node_modules/@manybitsbyte/retroapple-printers`, the layout every
+import path on this page assumes.
 
 ## Step 1 — bytes to text (2 minutes)
 
@@ -48,14 +48,14 @@ const printer = createPrinter("imagewriter-ii");
 
 let out = "";
 printer.on("text", (s) => { out += s; });
-printer.on("newline", => { out += "\n"; });
+printer.on("newline", () => { out += "\n"; });
 
 const ESC = 0x1b, CR = 0x0d, LF = 0x0a;
 const job = [ESC, 0x21,...[..."HELLO"].map(c => c.charCodeAt(0)), ESC, 0x22,
 ...[..." world"].map(c => c.charCodeAt(0)), CR, LF];
 
 for (const b of job) printer.receiveByte(b);
-printer.flushLine;
+printer.flushLine();
 console.log(JSON.stringify(out));
 ```
 
@@ -78,7 +78,7 @@ printer.setEventSink((e) => {
 });
 
 for (const b of [0x41, 0x42, 0x0d, 0x0a]) printer.receiveByte(b); // "AB" CR LF
-printer.flushLine;
+printer.flushLine();
 ```
 
 Prints:
@@ -136,7 +136,7 @@ const text = (s) => [...s].map((c) => c.charCodeAt(0));
 for (const b of [...text("Hello from the ImageWriter II."), CR, LF,
  ESC, 0x21,...text("Bold line."), ESC, 0x22, CR, LF])
  printer.receiveByte(b);
-printer.flushLine;
+printer.flushLine();
 console.log(paper.dots, "dots ->", paper.save((page) => `page-${page}.png`)[0].path);
 ```
 
@@ -171,8 +171,8 @@ const cols = Array.from({ length: 200 }, (_, x) => {
 for (const b of [0x1b, 0x4b, 0x35, // ESC K 5 — green
  0x1b, 0x47,...num4(cols.length),...cols, // ESC G nnnn <data>
  0x0d, 0x0a]) printer.receiveByte(b);
-printer.flushLine;
-console.log(paper.dots, "dots", paper.save( => "graphics.png")[0].path);
+printer.flushLine();
+console.log(paper.dots, "dots", paper.save(() => "graphics.png")[0].path);
 ```
 
 Prints `800 dots graphics.png`: 200 `printDots` events, one per column, each
@@ -193,7 +193,7 @@ import { createPrinter } from "@manybitsbyte/retroapple-printers";
 
 const printer = createPrinter("epson-fx80");
 printer.on("text", (s) => process.stdout.write(s));
-printer.on("newline", => process.stdout.write("\n"));
+printer.on("newline", () => process.stdout.write("\n"));
 
 /** Whatever produces bytes in your app — a card, a socket, a file — calls this. */
 const port = { write: (byte) => printer.receiveByte(byte & 0xff) };
@@ -201,7 +201,7 @@ const port = { write: (byte) => printer.receiveByte(byte & 0xff) };
 for await (const chunk of ["ESC/P from a byte source.\r\n", "second line\r\n"])
  for (const ch of chunk) port.write(ch.charCodeAt(0));
 
-printer.flushLine; // commit whatever the last line terminator did not
+printer.flushLine(); // commit whatever the last line terminator did not
 ```
 
 Prints both lines. For a real end-to-end source — emulated Super Serial Card →
@@ -230,7 +230,7 @@ printer.setEventSink((e) => {
 const CR = 0x0d, LF = 0x0a, text = (s) => [...s].map((c) => c.charCodeAt(0));
 for (let i = 1; i <= 70; i++)
  for (const b of [...text(`line ${i}`), CR, LF]) printer.receiveByte(b);
-printer.flushLine;
+printer.flushLine();
 console.log(`form ${m.formInch}" = ${m.formDots} dots at ${m.dpi} dpi`);
 console.log("pages:", [...pages], "· last strike on page", pageOf(lastY, m.formDots),
  "at", (yOnPage(lastY, m.formDots) / m.dpi).toFixed(2) + '"');

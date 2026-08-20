@@ -913,7 +913,7 @@ printer.setEventSink(({ name, data, dt }) => paper.accept(name, data, dt));
 printer.on("text", (s) => transcript.push(s)); // optional
 
 for (const b of byteStream) printer.receiveByte(b);
-printer.flushLine;
+printer.flushLine();
 ```
 
 - **Node and browser are the same code.** Pure ESM, zero runtime deps,

@@ -373,11 +373,9 @@ as for a change here.
 Written by Shawn Bullock, originally inside
 [web-a2e](https://github.com/mikedaley/web-a2e) — Mike Daley's browser-based
 Apple //e emulator — where it drives the on-screen virtual printer. Mike is
-credited throughout in recognition of the project the work grew up in, and
-because his characterization tests are what keep this emulation honest.
+credited throughout in recognition of the project.
 
-web-a2e is MIT licensed, and this package carries that license forward with the
-original notice retained.
+web-a2e is MIT licensed.
 
 ## Licence
 
